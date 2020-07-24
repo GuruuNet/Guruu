@@ -1,0 +1,102 @@
+
+<html>
+<head>
+  <title> GURUU </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+  <body>
+
+    <!----------------------------Navbar--------------------------->
+
+      <section id="nav-bar">
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="Home.html"><img src="Images/logo1.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="Home.html">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Home.html#domain">OUR DOMAINS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Home.html#work">HOW DO WE WORK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Home.html#about">ABOUT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Home.html#contact">CONTACT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Login.html">LOGIN/SIGNUP</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+      </section>
+
+<!-----------------------------Login--------------------------------->
+
+     <section id="login">
+        <div class="container text-center">
+          <h1 class="title text-center">Welcome Back!</h1>
+          <p class="form-heading text-center">Login</p>
+          <form action="validation.php" method="POST" class="log-form">
+
+    <input type="email" id="email" name="email" class="form-control" value="" placeholder="E-mail"><br>
+
+    <input type="password" id="pwd" name="pwd" class="form-control" value="" min="6" placeholder="Password"><br>
+
+    <button type="submit" class="btn btn-primary">LOGIN</button>
+
+  </form>
+
+          <br><p class="logfoot">Don't have an account ?<a href="Signup.html"> Sign-up here</a></p>
+
+        </div>
+
+      </section>
+
+      <!--------------------------------Footer------------------------------->
+
+      <section id="footer">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 footer-box">
+              <img src="Images/logo1.png">
+              <p>Thanks for visiting Guruu, an one of a kind mentoring website. Do give us feedback and ratings on our social-networking platforms.</p>
+            </div>
+            <div class="col-md-4 footer-box2">
+              <p><b>Contact Us</b></p>
+              <p><i class="fa fa-map-pin"></i>The Wall Street, Mumbai</p>
+              <p><i class="fa fa-phone"></i>+91 789729302</p>
+              <p><i class="fa fa-envelope-o"></i>example@gmail.com</p>
+            </div>
+
+            </div>
+
+          </div>
+
+      </section>
+
+      <!-----------------------------Scrolling---------------------------------->
+
+      <script src="smooth-scroll.js"></script>
+
+      <script>
+      	var scroll = new SmoothScroll('a[href*="#"]');
+      </script>
+
+  </body>
+</html>

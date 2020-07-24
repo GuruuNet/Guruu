@@ -1,0 +1,68 @@
+<html>
+	<head>
+    <title> Chat with us </title>
+    <link rel="stylesheet" href="chat.css">
+  </head>
+	<body>
+
+		<div></div>
+
+		<input placeholder=" Type a message" onchange="respond()">   <button class="btn btn-primary" >Send</button>
+
+   <br><p class="chatfoot">Solved your Queries ? Go to <a href="Home.html"> Home</a></p>
+
+		<script type="text/javascript">
+
+			var known = [
+				["hello", "hi"],
+				["i am *", "are you *?"],
+				["say * please", "*"],
+				["say *", "say please"],
+			];
+
+			var input = document.querySelector('input');
+			var output = document.querySelector('div');
+
+			function postChat(text, poster) {
+				var bubble = document.createElement("p");
+				bubble.innerText = text;
+				bubble.className = poster;
+				output.appendChild(bubble);
+			}
+
+			function respond() {
+				var text = input.value;
+				input.value = "";
+				postChat(text, "user");
+				response = think(text);
+				postChat(response, "bot");
+			}
+
+			function filter(text) {
+				text = text.toLowerCase();
+				return(text);
+			}
+
+			function think(user) {
+				user = filter(user);
+
+				for (var [key, value] of known) {
+					if (key.includes('*')) {
+						key = key.split('*');
+
+						if (user.startsWith(key[0]) && user.endsWith(key[1])) {
+							firstIndex = key[0].length;
+							finalIndex = user.lastIndexOf(key[1]);
+							custom = user.slice(firstIndex, finalIndex);
+							return(value.replace('*', custom));
+						}
+					} else if (user == key) {
+						return(value);
+					}
+				}
+				return("What?");
+			}
+		</script>
+
+	</body>
+</html>

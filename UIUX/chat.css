@@ -1,0 +1,103 @@
+*
+{
+	margin: 0;
+  font-family: sans-serif;
+	/* font-size: 2vmax; */
+	background-image: linear-gradient(to right, #a517ba,#5f1782);
+}
+body
+{
+  font-family: sans-serif;
+}
+input
+{
+  margin-bottom: 95px;
+  margin-left: 34%;
+  width: 20%;
+  border-radius: 20px;
+  /* border-radius: 5px 5px 5px 5px; */
+	position: absolute;
+	bottom: 0;
+	left: 0;
+  height: 60px;
+  background: #FFF;
+  color: black;
+  outline: none !important;
+  font-size: 20px;
+}
+.btn-primary
+{
+  box-shadow: none;
+  padding: 8px 25px;
+  border: none;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #a517ba,#5f1782) !important;
+  margin-left: 55%;
+  margin-bottom: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  outline: none !important;
+  color: #FFF;
+  font-size: 2vmax;
+}
+::placeholder
+{
+  color: ##7b1798 !important;
+}
+div
+{
+  margin-top: 80px;
+  margin-left: 33%;
+  border-radius: 10px 10px 10px 10px;
+	height: 80vh;
+	width: 56vh;
+	background: #FFF;
+	overflow-y: scroll;
+}
+div > p
+{
+	padding: 0.5rem;
+	text-align: center;
+	margin: 0.2rem;
+}
+.bot
+{
+	background: #999;
+	text-align: left;
+  margin-right: 50px;
+	border-radius: 15px 15px 15px 0px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  font-size: 2vmax;
+}
+.user
+{
+	background: #7b1798;
+	text-align: right;
+  margin-left: 50px;
+	border-radius: 15px 15px 0px 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #FFF;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  font-size: 2vmax;
+}
+.chatfoot
+{
+  margin-left: 38%;
+  color: #FFF;
+  font-size: 20px;
+}
+.chatfoot a
+{
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
