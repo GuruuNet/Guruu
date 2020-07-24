@@ -1,0 +1,344 @@
+<?php
+    if(isset($_POST["submit"])){
+        $timesarr=$_POST["Time"];
+        $newvalues=  implode(",", $timesarr);
+        include_once './checkboxClass.php';
+        $checkBoxClass=new checkboxClass();
+        echo $checkBoxClass->addtoDatabase($newvalues);
+    }
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Datepicker Example</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker3.css" rel="stylesheet" id="bootstrap-css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+<style>
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;} /* Green */
+.button2 {background-color: #008CBA;} /* Blue */
+</style></head>
+<body>
+    <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
+	<div class="container">
+
+	<input type="text" name="datefilter" value="" /><br>
+	
+    <a href="#" id="filldetails" onclick="addFields()">Choose Time</a>
+    <div id="container"/>
+
+<script>
+$('input[name="datefilter"]').daterangepicker({
+    "singleDatePicker": true,
+    
+}, function(start, end, label) {
+  console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+});
+</script>
+<script type='text/javascript'>
+        function addFields1(){
+            // Number of inputs to create
+            var number = document.getElementById("member").value;
+            // Container <div> where dynamic content will be placed
+            var container = document.getElementById("container");
+            // Clear previous contents of the container
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            
+        }
+    </script>
+    <script type='text/javascript'>
+        function addFields(){
+            // Number of inputs to create
+            
+           
+            var container = document.getElementById("container");
+            // Clear previous contents of the container
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+             container.appendChild(document.createElement("br"));
+            container.appendChild(document.createTextNode( "00:00-01:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                container.appendChild(document.createTextNode( "01:00-02:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "02:00-03:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+ 				container.appendChild(document.createTextNode( "03:00-04:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "04:00-05:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "05:00-06:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "06:00-07:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "07:00-08:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "08:00-09:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "09:00-10:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "10:00-11:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "11:00-12:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "12:00-13:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "13:00-14:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "14:00-15:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "15:00-16:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "16:00-17:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "17:00-18:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "18:00-19:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "19:00-20:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "20:00-21:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                container.appendChild(document.createTextNode( "21:00-22:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "22:00-23:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+                 container.appendChild(document.createTextNode( "23:00-00:00 "));
+             var input = document.createElement("input");
+                input.type = "checkbox";
+                input.name = "time[]";
+                input.id = "Time"
+                 container.appendChild(input);
+                // Append a line break 
+                container.appendChild(document.createElement("br"));
+
+
+                container.appendChild(document.createElement("br"));
+             var input = document.createElement("input");
+                input.type = "button";
+                input.name = "Button";
+                input.value = "Reset";
+                input.id = "Reset";
+                 container.appendChild(input);
+
+                  var input = document.createElement("input");
+                input.type = "Submit";
+                input.name = "submit";
+                input.value = "Submit values";
+               	input.id = "Submit";
+                 container.appendChild(input);
+                 container.appendChild(document.createElement("br"));
+
+                   container.appendChild(document.createElement("br"));
+                   var input = document.createElement("input");
+                input.type = "button";
+                input.name = "Button3";
+                input.value = "Finish";
+               	input.id = "Finish";
+                 container.appendChild(input);
+              
+     document.getElementById("Reset").onclick = function() {myFunction()};
+
+function myFunction() {
+  window.location.reload();
+}
+
+document.getElementById("Submit").onclick = function() {submitFunction()};
+
+function submitFunction() {
+  window.location.reload();
+}
+
+document.getElementById("Finish").onclick = function() {finishFunction()};
+
+function finishFunction() {
+  window.location.reload();
+}
+          
+        }
+    </script>
+</div>
+
+</body>
+</html>
